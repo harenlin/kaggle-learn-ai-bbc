@@ -1,9 +1,7 @@
 import pandas as pd
 import numpy as numpy
-from pprint import pprint
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, confusion_matrix
 
 def label_to_number(label):
     for i in range(len(label)):
@@ -32,8 +30,8 @@ def makecsv(id_test, test_y_pred):
     submission.to_csv('submission.csv', index=0, header=1)
     
 # read data
-train_corpus = pd.read_csv('./kaggle-learn-ai-bbc/train.csv')
-test_corpus = pd.read_csv('./kaggle-learn-ai-bbc/test.csv')
+train_corpus = pd.read_csv('./train.csv')
+test_corpus = pd.read_csv('./test.csv')
 
 # training data
 x_train = train_corpus['Text']

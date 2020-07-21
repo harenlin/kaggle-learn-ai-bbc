@@ -1,9 +1,7 @@
 import pandas as pd
 import numpy as numpy
-from pprint import pprint
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import classification_report, confusion_matrix
 
 def label_to_number(label):
     for i in range(len(label)):
